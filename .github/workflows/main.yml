@@ -32,7 +32,7 @@ jobs:
       run: pwd
       
     - name: cd Final-lab_terraform
-      run: cd ~/work/final-lab/final-lab/terraform/terraform/
+      run: cd ~/work/final-lab/final-lab/terraform/
 
     - name: list current directory
       run: ls -ax
@@ -43,8 +43,20 @@ jobs:
     - name: Initialize Terraform
       run: terraform init
 
+    - name: list current directory
+      run: ls -ax
+
+    - name: pwd current directory
+      run: pwd
+
     - name: Terraform Plan
-      run: cd ~/work/final-lab/final-lab/terraform/terraform/ | terraform plan
+      run:  terraform plan
+
+    - name: list current directory
+      run: ls -ax
+
+    - name: pwd current directory
+      run: pwd
 
     - name: Terraform Apply
-      run: cd ~/work/final-lab/final-lab/terraform/terraform/ | terraform apply -auto-approve
+      run:  terraform apply -auto-approve
