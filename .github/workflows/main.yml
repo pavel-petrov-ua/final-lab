@@ -32,26 +32,11 @@ jobs:
     - name: pwd list
       run: pwd
       
-    - name: cd Final-lab_terraform
-      run: cd ~/work/final-lab/final-lab/terraform/vpc/
-
-    - name: list current directory
-      run: ls -ax
-
-    - name: pwd current directory
-      run: pwd 
-      
     - name: Initialize Terraform
-      run: terraform init  # | terraform plan | terraform apply
-
-    - name: list current directory
-      run: ls -ax
-
-    - name: pwd current directory
-      run: pwd
+      run: cd $TERRAFORM_CLI_PATH | terraform init  # | terraform plan | terraform apply
 
     - name: Terraform Plan
-      run:  terraform plan 
+      run: cd cd $TERRAFORM_CLI_PATH | terraform plan 
 
     - name: list current directory
       run: ls -ax
@@ -60,4 +45,4 @@ jobs:
       run: pwd
 
     - name: Terraform Apply
-      run:  terraform apply -auto-approve
+      run: cd $TERRAFORM_CLI_PATH | terraform apply -auto-approve
