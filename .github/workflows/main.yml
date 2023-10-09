@@ -23,6 +23,8 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1 
+    - name: echo env
+      run: echo $TERRAFORM_CLI_PATH
 
     - name: list dirictiry
       run: ls -ax
@@ -37,7 +39,7 @@ jobs:
       run: ls -ax
 
     - name: pwd current directory
-      run: pwd
+      run: pwd 
       
     - name: Initialize Terraform
       run: terraform init  # | terraform plan | terraform apply
