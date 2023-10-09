@@ -23,3 +23,11 @@ resource "aws_default_network_acl" "default" {
     to_port    = 0
   }
 }
+
+output "vpc_main" {
+  value = aws_vpc.mainvpc.id
+}
+
+output "vpc_cidr" {
+  value = aws_vpc.mainvpc.cidr_block
+}
