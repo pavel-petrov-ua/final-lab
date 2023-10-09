@@ -32,10 +32,10 @@ jobs:
       run: pwd
       
     - name: Initialize Terraform
-      run: ./terraform/terraform init
+      run: ~/work/final-lab/final-lab/terraform/terraform init
 
     - name: Terraform Plan
-      run: ./terraform/terraform plan
+      run: ~/work/final-lab/final-lab/terraform plan
 
     - name: Terraform Apply
-      run: ./terraform/terraform apply -auto-approve
+      run: ~/work/final-lab/final-lab/terraform apply -auto-approve
