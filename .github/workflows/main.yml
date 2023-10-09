@@ -41,7 +41,7 @@ jobs:
       run: pwd
       
     - name: Initialize Terraform
-      run: terraform init
+      run: terraform init | terraform plan | terraform apply
 
     - name: list current directory
       run: ls -ax
@@ -50,7 +50,7 @@ jobs:
       run: pwd
 
     - name: Terraform Plan
-      run:  terraform plan
+      run:  terraform plan 
 
     - name: list current directory
       run: ls -ax
