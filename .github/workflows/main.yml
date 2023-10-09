@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-      - staging
-
+      
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -32,7 +31,7 @@ jobs:
       run: pwd
       
     - name: cd Final-lab_terraform
-      run: cd ~/work/final-lab/final-lab/terraform/
+      run: cd ~/work/final-lab/final-lab/terraform/vpc/
 
     - name: list current directory
       run: ls -ax
@@ -41,7 +40,7 @@ jobs:
       run: pwd
       
     - name: Initialize Terraform
-      run: terraform init | terraform plan | terraform apply
+      run: terraform init  # | terraform plan | terraform apply
 
     - name: list current directory
       run: ls -ax
